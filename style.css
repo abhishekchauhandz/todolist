@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --myfont: 'Mulish', sans-serif;
+    --my-btn-font: 'Montserrat', sans-serif;
+    --lg-lightcolor: linear-gradient(to left, rgba(116, 235, 213, 0.6), rgba(159, 172, 230, 0.6));
+    --lg-color: linear-gradient(to left, #74ebd5, #9face6);
+}
+
+body {
+    background: var(--lg-lightcolor);
+    font-family: var(--myfont);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 50px 0;
+    width: 100%;
+    /* height: 100%; */
+}
+
+main {
+    background-color: #fff;
+    border-radius: 10px;
+    -webkit-border-radius: 20px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 0.67px 5.3px rgba(0, 0, 0, 0.048);
+    /* width: 35%; */
+    /* height: 500px; */
+    /* overflow: hidden;  */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    background: var(--lg-color);
+    padding: 30px 0;
+    
+} 
+.header h1 {
+    color: #222;
+    font-family: var(--my-btn-font);
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#task-btn {
+    cursor: pointer;
+    background: var(--lg-color);
+    border-radius: 6px;
+    border: 2px solid lightslategray;
+    outline: none;
+    color: #fff;
+    font-family: var(--my-btn-font);
+    font-size: 16px;
+    padding: 10px;
+    width: 80%;
+    margin-top: 30px;
+    align-self: center;
+    justify-self: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 1s ease;
+    z-index: 1;
+}
+
+#task-btn:hover {
+    background: linear-gradient(to right, #74ebd5, #9face6);
+}
+
+#to-do-app {
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+/* .task-form {
+    display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 33px;
+  width: 400px;
+  height: 400px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+} */
+.task-form-header {
+    max-width: 20%;
+    position: relative;
+    left: 90%;
+  }
+.close-task-form-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.close-icon {
+    width: 20px;
+    height: 20px;
+}
+.form-control {
+    margin-bottom: 10px;
+    /* position: relative; */
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.form-control input {
+    width: 100%;
+    border: 2px solid #f0f0f0;
+    border-radius: 5px;
+    display: block;
+    font-family: var(--myfont);
+    font-size: 14px;
+    padding: 5px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control textarea {
+    width: 100%;
+    /* height: 100px; */
+}
+
+.task-form #add-task {
+    /* background: var(--lg-color); */
+    cursor: pointer;
+    border-radius: 6px;
+    /* border: none; */
+    outline: none;
+    /* color: #fff; */
+    display: block;
+    font-family: var(--my-btn-font);
+    font-size: 16px;
+    padding: 15px 0;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* transition: all 1s ease; */
+}
+#confirm-close-dialog {
+    padding: 10px;
+    margin: 70px auto;
+    border-radius: 15px;
+    z-index: 2;
+  }
+  
+  .confirm-close-dialog-btn-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .discard-message-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  #tasks-container {
+    height: 100%;
+    overflow-y: auto;
+  }
+  .btn {
+    cursor: pointer;
+    background: var(--lg-color);
+    border-radius: 6px;
+    border: 2px solid lightslategray;
+    outline: none;
+    color: #000000;
+    font-family: var(--my-btn-font);
+    padding: 2px;
+    margin: 10px 30px 10px 0px;
+  }
+.btn:hover {
+    background: linear-gradient(to right, #74ebd5, #9face6);
+}
+  .task {
+    margin: 20px 0;
+  }
+  .hidden {
+    display: none;
+  }
